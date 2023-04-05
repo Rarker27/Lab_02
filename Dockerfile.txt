@@ -1,0 +1,11 @@
+# Використовуємо базовий образ Python 3
+FROM python:3
+
+# Копіюємо файл "app.py" в кореневу директорію контейнера
+COPY app.py /
+
+# Встановлюємо бібліотеку Flask
+RUN pip install flask
+
+# Запускаємо додаток командою "python ./app.py"
+CMD [ "python", "./app.py" ]
